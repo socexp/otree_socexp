@@ -24,11 +24,12 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
-    pass
+    total_contribution = models.CurrencyField()
+    individual_share = models.CurrencyField()
 
 class Player(BasePlayer):
     contribution = models.CurrencyField(
         min=0, 
         max=Constants.endowment, 
-        label="Please decide how much you want to contribute"
+        label="Please decide how much you want to contribute to the public pool."
     )
