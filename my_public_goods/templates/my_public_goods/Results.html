@@ -7,10 +7,15 @@
 
 {% block content %}
     <p>
-        Your contribution is {{ player.contribution }}.
-        Your group's total contribution is {{ group.total_contribution }}
-        Everyone in the group receives {{ group.individual_share } from the public pool.
-        Your total income is therefore {{ player.payoff }}
+        Your contribution is {{ player.contribution }}.</p>
+    <p>
+        Your group's total contribution is {{ group.total_contribution }}.
+    </p>
+    <p>
+        Everyone in the group receives {{ group.individual_share }} from the public pool.
+    </p>
+    <p>
+        Your total income is therefore {{ player.payoff }}.
     </p>
     {% next_button %}
 {% endblock %}
