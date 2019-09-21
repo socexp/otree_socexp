@@ -3,14 +3,22 @@ from ._builtin import Page, WaitPage
 from .models import Constants
 
 
-class MyPage(Page):
-    pass
+class Contribute(Page):
+    form_model = 'player'
+    form_fields = ['contribution']
 
 
 class ResultsWaitPage(WaitPage):
 
     def after_all_players_arrive(self):
-        pass
+        group = self.group
+        players = group.get_players()
+        contribution = [p.contribution for p in players]
+        group.total_contribution = sum(contribution)
+        group.individual_share = group.total_contribution*Constants.multiplier/Constants.players_per_group
+        for p in players:
+            p.payoff = Constants.endowment - p.contribution + group.individual_share
+        
 
 
 class Results(Page):
@@ -18,7 +26,7 @@ class Results(Page):
 
 
 page_sequence = [
-    MyPage,
+    Contribute,
     ResultsWaitPage,
     Results
 ]
