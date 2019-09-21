@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Send Decision
+{% endblock %}
+
+{% block content %}
+    <P>
+        You are Participant A. You have {{ Constants.endowment }}.
+    </P>
+    {% formfields %}
+    
+    {% next_button %}
+
+{% endblock %}

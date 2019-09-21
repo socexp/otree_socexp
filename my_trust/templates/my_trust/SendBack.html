@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Send Back Decision
+{% endblock %}
+
+{% block content %}
+    <P>
+        You are Participant B. Participant A has sent {{ group.sent_amount }} to you.
+        Its value has grown to {{ increased_total }}.
+    </P>
+
+    {% formfield group.sent_back_amount %}
+    
+    {% next_button %}
+
+{% endblock %}
