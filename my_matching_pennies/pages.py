@@ -3,18 +3,29 @@ from ._builtin import Page, WaitPage
 from .models import Constants
 
 
-class MyPage(Page):
-    pass
+class Choice(Page):
+    form_model = 'player'
+    form_fields = ['penny_side']
+
+    def vars_for_template(self):
+        return dict(
+            player_in_previous_rounds = self.player.in_previous_rounds()
+        )
 
 
 class ResultsWaitPage(WaitPage):
 
     def after_all_players_arrive(self):
-        pass
+        self.group.set_payoffs()
 
 
-class Results(Page):
-    pass
+class ResultsSummary(Page):
+    
+    def is_displayed(self):
+        return self.round_number == Constants.num_rounds
+
+    def vars_for_template(self):
+        
 
 
 page_sequence = [
