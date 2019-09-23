@@ -17,7 +17,7 @@
 </P>    
 
 <h4>Round History</h4>
-<table>
+<table class="table">
     <tr>
         <th>Round</th> <th>Player and outcome</th>
     </tr>
@@ -29,9 +29,12 @@
     {% endfor %}
 </table>
 
-<p>
+<p>   </p>
+
+<h4>This is Round {{ subsession.round_number }}.</h4>
+<h4>
     In this round, you are the {{ player.role }}.
-</p>
+</h4>
 
 {% formfield player.penny_side label="Your choice is:" %}
 
