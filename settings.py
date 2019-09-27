@@ -76,6 +76,11 @@ USE_POINTS = True
 
 ROOMS = [
     dict(
+        name = 'soc101',
+        display_name = '社会学实验室',
+        participant_labe_file = '_rooms/soc101.txt'
+    ),
+    dict(
         name='econ101',
         display_name='Econ 101 class',
         participant_label_file='_rooms/econ101.txt'
