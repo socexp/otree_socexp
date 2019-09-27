@@ -13,6 +13,12 @@ SESSION_CONFIG_DEFAULTS = dict(
 
 SESSION_CONFIGS = [
     dict(
+        name = 'my_survey_and_trust_combo',
+        display_name = "My survey and trust game combination",
+        num_demo_participants = 2,
+        app_sequence = ['my_test_survey', 'my_trust'],
+    ),
+    dict(
         name = 'my_matching_pennies',
         display_name = "My matching pennies game",
         num_demo_participants = 2,
@@ -68,17 +74,18 @@ SESSION_CONFIGS = [
 
 # ISO-639 code
 # for example: de, fr, ja, ko, zh-hans
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'zh-hans'
 
 # e.g. EUR, GBP, CNY, JPY
-REAL_WORLD_CURRENCY_CODE = 'USD'
+REAL_WORLD_CURRENCY_CODE = 'CNY'
 USE_POINTS = True
 
 ROOMS = [
     dict(
         name = 'soc101',
         display_name = '社会学实验室',
-        participant_labe_file = '_rooms/soc101.txt'
+        participant_label_file = '_rooms/soc101.txt',
+        use_secure_urls = True
     ),
     dict(
         name='econ101',
