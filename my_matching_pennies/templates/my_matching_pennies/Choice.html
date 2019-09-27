@@ -31,10 +31,10 @@
 
 <p>   </p>
 
-<h4>This is Round {{ subsession.round_number }}.</h4>
-<h4>
-    In this round, you are the {{ player.role }}.
-</h4>
+<p>Now is Round <strong>{{ subsession.round_number }}</strong>.</p>
+<p>
+    In this round, you are the <b>{{ player.role }}</b>.
+</p>
 
 {% formfield player.penny_side label="Your choice is:" %}
 
