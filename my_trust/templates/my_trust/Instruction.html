@@ -1,0 +1,42 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Instructions
+{% endblock %}
+
+{% block content %}
+    <P>
+        This is a trust game. You are paired with another player to play it. The system randomly assigned the roles for each of you.
+    </P>
+    <p>
+        One of you will be player A and be given {{ Constants.endowment }} as the initial endowment.
+        Player A decides how much of the resources will be transferred to player A.
+    </p>
+    <p>The amount not transferred will remain as A's but will not grow in value.
+        The resources transferred to B will increase its value by a multiplier of {{Constants.multiplication_factor}}.
+        That is, each point transferred will become {{Constants.multiplication_factor}} points.
+    </P>
+    <p>
+        Then, player B decides how much of the resources in his/her hands will be given back to player A.
+    </p>
+    <p>
+        After player B makes the decision, the game ends.
+    </p>
+
+    
+    {% next_button %}
+
+{% endblock content %}
+
+<!--This is a soft timeout, just for testing.-->
+{% block app_scripts %}
+    <script>
+        setTimeout(
+            function () {
+                alert("Time has run out. Please make your decision.");
+                },
+            30*1000 // 30 seconds
+        );
+    </script>
+{% endblock app_scripts %}

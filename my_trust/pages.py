@@ -2,6 +2,9 @@ from otree.api import Currency as c, currency_range
 from ._builtin import Page, WaitPage
 from .models import Constants
 
+class Instruction(Page):
+    # template_name = 'my_trust/Instruction.html'
+    pass
 
 class Send(Page):
     form_model = 'group'
@@ -46,6 +49,7 @@ class Results(Page):
 
 
 page_sequence = [
+    Instruction,
     Send,
     WaitForP1,
     SendBack,
