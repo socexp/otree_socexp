@@ -85,7 +85,7 @@ ROOMS = [
         name = 'soc101',
         display_name = '社会学实验室',
         participant_label_file = '_rooms/soc101.txt',
-        use_secure_urls = True
+        # use_secure_urls = True
     ),
     dict(
         name='econ101',
