@@ -16,13 +16,13 @@ SESSION_CONFIGS = [
         name='public_goods_guoqi',
         display_name = "public_goods_guoqi",
         num_demo_participants=3,
-        app_sequence=['public_goods_guoqi']
+        app_sequence=['public_goods_guoqi','payment_info']
     ),
     dict(
         name='public_goods_guoqi_control',
         display_name = "public_goods_guoqi_control",
         num_demo_participants=3,
-        app_sequence=['public_goods_guoqi_control']
+        app_sequence=['public_goods_guoqi_control','payment_info']
     ),
     dict(
         name = 'my_survey_and_trust_combo',
@@ -116,10 +116,7 @@ ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
 DEMO_PAGE_INTRO_HTML = """
 Here are some oTree games.
 """
-#environ['OTREE_PRODUCTION'] = 1
 
-# Consider '', None, and '0' to be empty/false
-#DEBUG = False
 
 # don't share this with anybody.
 SECRET_KEY = 'm*jww9!pb_h8j18u%77_-aqy=u(om0ge#*1&!*3i%ie(4ezq0r'
