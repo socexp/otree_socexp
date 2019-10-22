@@ -1,13 +1,31 @@
-{% extends "public_goods/Page.html" %}
+{% extends "public_goods_guoqi/Page.html" %}
 {% load otree %}
 
 
+{% block app_styles %}
+<style>
+        .backimage {
+            /*设置图片大小*/
+            width: ;
+            height: 100%;
+            /*背景图像将仅显示一次 no-repeat*/
+            background-repeat: no-repeat;
+            /*添加您要添加的背景图片*/
+            background-image: url('http://kk.51.com/refer?url=https://mmbiz.qpic.cn/mmbiz_gif/uoicTEibImck2D5qUKUUTtbgnXFxEx0vdOBrDEtFuwiafFYr2gtRUHjA5SwSdjr9AtIUFdpYN7wtd0MzdM7LTS2DQ/?wx_fmt=gif');
+            /*图片居中*/
+            margin: auto;
+        }
+ </style>
+ 
+{% endblock %}
 
 {% block title %}
     <p>第 {{ subsession.round_number }} 轮决策结果</p>
 {% endblock %}
 
 {% block content %}
+ <div class="backimage"> 
+
     <table class="table-condensed" style="width:500px; margin-top:20px;" frame= "hsides">
 		<tr><td>你投入公共基金的资金：</td><td>    <b>{{ contribution }}</b></td></tr>
 		<tr><td>你留在自己手中的资金：</td><td>    <b>{{ own_holdings }}</b></td></tr>  
@@ -30,4 +48,6 @@
 		{% next_button %}
     </p>
     
+
+</div>
 {% endblock %}

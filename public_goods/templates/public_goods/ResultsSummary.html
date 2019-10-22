@@ -1,0 +1,18 @@
+{% extends "public_goods/Page.html" %}
+{% load otree %}
+
+
+{% block title %}
+    最终结果
+{% endblock %}
+
+{% block content %}
+    <tr><td colspan="5"><hr/></td></tr>  
+    <p>你在 {{Constants.num_rounds }} 轮决策中获得的总收入是：    <b>{{ total_payoff }}</b></p>
+    <p>
+        你的总收入换算成人民币为：    <b>{{ total_payoff_rmb }}</b>
+    </p>
+	<tr><td colspan="5"><hr/></td></tr>  
+    <p><b>决策任务到此结束，请通知外面的研究人员！</b></p>
+
+{% endblock %}

@@ -13,6 +13,18 @@ SESSION_CONFIG_DEFAULTS = dict(
 
 SESSION_CONFIGS = [
     dict(
+        name='public_goods_guoqi',
+        display_name = "public_goods_guoqi",
+        num_demo_participants=3,
+        app_sequence=['public_goods_guoqi']
+    ),
+    dict(
+        name='public_goods_guoqi_control',
+        display_name = "public_goods_guoqi_control",
+        num_demo_participants=3,
+        app_sequence=['public_goods_guoqi_control']
+    ),
+    dict(
         name = 'my_survey_and_trust_combo',
         display_name = "My survey and trust game combination",
         num_demo_participants = 2,
@@ -70,15 +82,14 @@ SESSION_CONFIGS = [
     ),
 ]
 # see the end of this file for the inactive session configs
-
-
+    
 # ISO-639 code
 # for example: de, fr, ja, ko, zh-hans
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'zh-hans'
 
 # e.g. EUR, GBP, CNY, JPY
 REAL_WORLD_CURRENCY_CODE = 'CNY'
-USE_POINTS = True
+USE_POINTS = False
 
 ROOMS = [
     dict(
@@ -105,6 +116,10 @@ ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
 DEMO_PAGE_INTRO_HTML = """
 Here are some oTree games.
 """
+#environ['OTREE_PRODUCTION'] = 1
+
+# Consider '', None, and '0' to be empty/false
+#DEBUG = False
 
 # don't share this with anybody.
 SECRET_KEY = 'm*jww9!pb_h8j18u%77_-aqy=u(om0ge#*1&!*3i%ie(4ezq0r'

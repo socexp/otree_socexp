@@ -1,0 +1,37 @@
+{% extends "public_goods_guoqi_control/Page.html" %}
+{% load otree %}
+
+{% block app_styles %}
+<style>
+        .backimage {
+            /*设置图片大小*/
+            width: ;
+            height: 100%;
+            /*背景图像将仅显示一次 no-repeat*/
+            background-repeat: no-repeat;
+            /*添加您要添加的背景图片*/
+            background-image: url('http://img.jk51.com/img_jk51/320074614.jpeg');
+            /*图片居中*/
+            margin: auto;
+        }
+ </style>
+ 
+{% endblock %}
+{% block title %}
+     <p>这个任务将进行 {{ Constants.num_rounds }} 轮，现在是第 {{ subsession.round_number }} 轮 ({{subsession.round_number }}/{{ Constants.num_rounds }})</p>
+{% endblock %}
+
+{% block content %}
+<div class="backimage">
+<tr><td>你现在的资金是：<b>{{ Constants.base_endowment }}</b></td><td>
+
+
+    {% formfield player.contribution label="你要投入多少资金到公共基金里?" %}
+
+    {% next_button %}
+
+
+</div>
+
+{% endblock %}
+

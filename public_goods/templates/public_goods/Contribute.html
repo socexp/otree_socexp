@@ -1,16 +1,20 @@
-{% extends "global/Page.html" %}
+{% extends "public_goods/Page.html" %}
 {% load otree %}
 
+
 {% block title %}
-    Contribute
+     <p>这个任务将进行 {{ Constants.num_rounds }} 轮，现在是第 {{ subsession.round_number }} 轮 ({{subsession.round_number }}/{{ Constants.num_rounds }})</p>
 {% endblock %}
 
 {% block content %}
 
-    {% formfield player.contribution label="How much will you contribute to the project (from 0 to 100)?" %}
+<tr><td>你现在的资金是：<b>{{ Constants.base_endowment }}</b></td><td>
+
+
+    {% formfield player.contribution label="你要投入多少资金到公共基金里?" %}
 
     {% next_button %}
 
-    {% include Constants.instructions_template %}
 
 {% endblock %}
+
