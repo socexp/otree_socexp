@@ -8,7 +8,10 @@ class Introduction(Page):
     """Description of the game: How to play and returns expected"""
     def is_displayed(self):
         return self.round_number == 1
-
+class Introduction2(Page):
+    """Description of the game: How to play and returns expected"""
+    def is_displayed(self):
+        return self.round_number == 1       
 class Contribute(Page):
     """Player: Choose how much to contribute"""
     # this is an attribute
@@ -53,4 +56,4 @@ class ResultsSummary(Page):
             'player_in_all_rounds': player_in_all_rounds,
         }
 		
-page_sequence = [Introduction,Contribute,ResultsWaitPage,Results,ResultsSummary]
+page_sequence = [Introduction,Introduction2,Contribute,ResultsWaitPage,Results,ResultsSummary]

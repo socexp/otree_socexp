@@ -1,24 +1,6 @@
 {% extends "public_goods_guoqi_control/Page.html" %}
 {% load otree %}
 
-
-{% block app_styles %}
-<style>
-        .backimage {
-            /*设置图片大小*/
-            width: ;
-            height: 100%;
-            /*背景图像将仅显示一次 no-repeat*/
-            background-repeat: no-repeat;
-            /*添加您要添加的背景图片*/
-            background-image: url('http://kk.51.com/refer?url=https://mmbiz.qpic.cn/mmbiz_gif/uoicTEibImck2D5qUKUUTtbgnXFxEx0vdOBrDEtFuwiafFYr2gtRUHjA5SwSdjr9AtIUFdpYN7wtd0MzdM7LTS2DQ/?wx_fmt=gif');
-            /*图片居中*/
-            margin: auto;
-        }
- </style>
- 
-{% endblock %}
-
 {% block title %}
     <p>第 {{ subsession.round_number }} 轮决策结果</p>
 {% endblock %}
