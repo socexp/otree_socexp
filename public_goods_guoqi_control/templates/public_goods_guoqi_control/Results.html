@@ -1,6 +1,7 @@
 {% extends "public_goods_guoqi_control/Page.html" %}
 {% load otree %}
 
+
 {% block title %}
     <p>第 {{ subsession.round_number }} 轮决策结果</p>
 {% endblock %}
@@ -9,13 +10,13 @@
  <div class="backimage"> 
 
     <table class="table-condensed" style="width:500px; margin-top:20px;" frame= "hsides">
-		<tr><td>你投入公共基金的资金：</td><td>    <b>{{ contribution }}</b></td></tr>
-		<tr><td>你留在自己手中的资金：</td><td>    <b>{{ own_holdings }}</b></td></tr>  
-        <tr><td>这一轮你的总体所得(分得的公共基金+自己留下的资金)：</td><td>    <b>{{ payoff }}</b></td></tr>  		
+		<tr><td>你投入公共基金的资金：<b>{{ contribution }}</b></td></tr>
+		<tr><td>你留在自己手中的资金：<b>{{ own_holdings }}</b></td></tr>  
+        <tr><td>这一轮你的总体所得(分得的公共基金+自己留下的资金)：<b>{{ payoff }}</b></td></tr>  		
         <tr><td colspan="5"><hr/></td></tr>
-        <tr><td>本组三人总共投资到公共基金中的数额：</td><td>    <b>{{ total_contribution }}</b></td></tr>
-        <tr><td>公共基金加倍后的数额：</td><td>     <b>{{ total_earnings }}</b><td></tr>
-        <tr><td>每个人所分得的公共基金回报：</td><td>     <b>{{ individual_share }}</b></td></tr>       
+        <tr><td>本组总共投资到公共基金中的数额：<b>{{ total_contribution }}</b></td></tr>
+        <tr><td>公共基金加倍后的数额：<b>{{ total_earnings }}</b><td></tr>
+        <tr><td>每个人所分得的公共基金回报：<b>{{ individual_share }}</b></td></tr>       
     </table>
     <p>
 	   

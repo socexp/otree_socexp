@@ -16,13 +16,13 @@ SESSION_CONFIGS = [
         name='public_goods_guoqi',
         display_name = "public_goods_guoqi",
         num_demo_participants=3,
-        app_sequence=['public_goods_guoqi','payment_info']
+        app_sequence=['public_goods_quiz','public_goods_guoqi','payment_info']
     ),
     dict(
         name='public_goods_guoqi_control',
         display_name = "public_goods_guoqi_control",
         num_demo_participants=3,
-        app_sequence=['public_goods_guoqi_control','payment_info']
+        app_sequence=['public_goods_quiz','public_goods_guoqi_control','payment_info']
     ),
     dict(
         name = 'my_survey_and_trust_combo',

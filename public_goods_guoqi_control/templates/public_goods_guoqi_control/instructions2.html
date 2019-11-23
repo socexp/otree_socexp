@@ -1,18 +1,21 @@
 {% load otree %}
 
 <div class="card bg-light instructions">
-
     <div class="card-body">
-	<p style="text-indent:2em">你需要进行<b>{{Constants.num_rounds }}轮</b>决策。在每一轮开始时，每位参与者都会获得<b> {{ Constants.base_endowment}}元</b>的实验币作为初始资金。你需要决定将其中多少资金保留在自己手中，多少资金投入到小组的“公共基金”中去。</p>
-	<p style="text-indent:2em"> 留在手里的资金，完全归自己有，但不会增值。而投入公共基金的资金，其价值会<b>翻倍</b>：即每投入的1元都会变成{{Constants.multiplier}}元。</p>
+	<p style="text-indent:2em">你需要进行<b>{{Constants.num_rounds }}轮</b>决策。
+    在每一轮开始时，每位参与者都会获得<b> {{ Constants.base_endowment}}元</b>的实验币作为初始资金。
+    你需要决定将其中多少资金保留在自己手中，多少资金投入到小组的“公共基金”中去。</p>
+	<p style="text-indent:2em"> 留在手里的资金，完全归自己有，但不会增值。而投入公共基金的资金，
+    其价值会<b>翻倍</b>：即每投入的1元都会变成{{Constants.multiplier}}元。</p>
+<p style="text-indent:2em">增值后，公共基金中的总金额会<b>平均</b>的分给<b>{{ Constants.players_per_group }} 位</b>组员。
+也就是说，无论一个人投入多少，他/她都会同样的获得公共基金总值的三分之一。</p>
 
-<p style="text-indent:2em">增值后，公共基金中的总金额会<b>平均</b>的分给<b>{{ Constants.players_per_group }} 位</b>组员。也就是说，无论一个人投入多少，他/她都会同样的获得公共基金总值的三分之一。</p>
+<p style="text-indent:2em">你该轮的收入就是你<font color='ff0000'><b>保留在手中的金额再加上你从公共基金中分得的金额</b></font>。</p>
 
-<p style="text-indent:2em">你该轮的收入就是你保留在手中的金额再加上你从公共基金中分得的金额。</p>
-
-<p style="text-indent:2em">所有参与者在每一轮做出决策后，请点击“<b>下一页</b>”。接下来的页面会呈现相应的结果信息，如公共基金的总额，你在该轮的投资所得等。请按“下一页”进入下一轮的投资决策。新一轮中，你会获得新的{{ Constants.base_endowment}}元资金，上一轮的投资所得不参与这一轮的投资决策。</p>
+<p style="text-indent:2em">在每一轮做出决策后，会呈现相应的投资结果信息，如公共基金的总额，你在该轮的投资所得等。然后，进入下一轮的投资决策。
+新一轮中，你会获得新的{{ Constants.base_endowment}}元资金，上一轮的投资所得不参与这一轮的投资决策。</p>
 <p style="text-indent:2em">当{{Constants.num_rounds}}轮的决策全部完成后，请退出页面。</p>
-<p style="text-indent:2em">如果你对本任务有任何问题，请向实验人员提问。如果没有问题，请点击“下一页”，开始投资决策。</p>
+<p style="text-indent:2em">如果对本任务没有疑问，请点击“下一页”，开始投资决策。</p>
 
    </div>
 </div>
